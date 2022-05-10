@@ -50,6 +50,17 @@ Route::get('/', function () {
                 super helpful and whatever issue I\'m having gets fixed 
                 right away. Hands down my favorite hosting company of 
                 the many I\'ve tried. '
+            ],
+            [
+                'id' => 00002,
+                'name' => 'Diplo',
+                'slug' => 'diplo',
+                'description' => 'Just want to give a quick shoutout 
+                to the folks at @linode. I don\'t have to contact their 
+                support team very often, but when I do they\'re always 
+                super helpful and whatever issue I\'m having gets fixed 
+                right away. Hands down my favorite hosting company of 
+                the many I\'ve tried. '
             ]
         ]
     ]);
