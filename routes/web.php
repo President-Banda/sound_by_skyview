@@ -28,4 +28,3 @@ Route::get('/listing/{id}', function($id){
  
 });
 
-//Route::get
