@@ -21,14 +21,11 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/listing/{id}', function($id){
-    $listing = Listing::find($id);
-    if($listing){
-        return view('listing', [
-            'listing' => $listing,
-        ]);
-
-    }
+Route::get('/listing/{listing}', function(Listing $listing) {
+    $listing = Listing::find($listing->id);
+    return view('listing', [
+        'listing' => $listing,
+    ]);
 
 });
 
