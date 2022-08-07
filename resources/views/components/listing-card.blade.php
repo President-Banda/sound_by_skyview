@@ -1,6 +1,7 @@
 @props(['listing'])
 
 <!-- Item 1 -->
+<x-card>
     <div class="flex">
         <img
             class="hidden w-48 mr-6 md:block"
@@ -38,4 +39,4 @@
                 <i class="fa-solid fa-location-dot"></i> {{ $listing->location }}            </div>
         </div>
     </div>
-</div>
+</x-card>
