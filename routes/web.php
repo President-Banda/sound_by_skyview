@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('providers', [
-        'heading' => 'Ready Gigs',
         'listings' => Listing::all(),
     ]);
 });
