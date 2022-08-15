@@ -6,5 +6,11 @@ use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
-    //
+    // To get the home page
+    public function index(){
+        $listings = Listing::all();
+        return view('listings', [
+            'listings' => $listings,
+        ]);
+    }
 }
