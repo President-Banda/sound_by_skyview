@@ -13,4 +13,10 @@ class ListingController extends Controller
             'listings' => $listings,
         ]);
     }
+
+    public function show(Listing $listing){
+        return view('listing', [
+            'listing' => $listing,
+        ]);
+    }
 }
