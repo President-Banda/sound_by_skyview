@@ -14,11 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    \App\Http\Controllers\ListingsController::index();
-});
+Route::get('/', 'ListingController@index');
 
-Route::get('/listing/{listing}', function(Listing $listing) {
+Route::get('/listing/{listing}', 'ListingController@show');
 
 
 });

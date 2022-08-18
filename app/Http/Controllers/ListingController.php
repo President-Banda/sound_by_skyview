@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Model\Listing;
 
 use Illuminate\Http\Request;
 
