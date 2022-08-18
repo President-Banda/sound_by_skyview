@@ -16,6 +16,7 @@ class ListingController extends Controller
 
     //show single listing
     public function show(Listing $listing){
+        $listing = Listing::find($listing->id);
         return view('listing', [
             'listing' => $listing,
         ]);
