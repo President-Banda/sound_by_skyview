@@ -1,6 +1,4 @@
-@extends('layouts.app')
-
-@section('content')
+<x-app>
     @include('partials._search')
     <a href="/" class="inline-block text-black ml-4 mb-4">
         <i class="fa-solid fa-arrow-left"></i> Back
@@ -22,7 +20,7 @@
                 <div class="text-xl font-bold mb-4">
                     {{ $listing->company }}
                 </div>
-                <x-listing-tags :tagsCSV="$listing->tags" />
+                <x-listing-tags :tagsCSV="$listing->tags"/>
                 <div class="text-lg my-4">
                     <i class="fa-solid fa-location-dot"></i> {{ $listing->location }}
                 </div>
@@ -54,8 +52,8 @@
         </x-card>
     </div>
 
-<p>
-    {{ $listing['description'] }}
-</p>
+    <p>
+        {{ $listing['description'] }}
+    </p>
 
-@endsection
+</x-app>>

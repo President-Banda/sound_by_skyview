@@ -9,6 +9,7 @@ class ListingController extends Controller
 {
     // To get the home page
     public function index(){
+        dd(request('tag'));
         $listings = Listing::all();
         return view('listings.index', [
             'listings' => $listings,
