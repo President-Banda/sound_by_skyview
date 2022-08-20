@@ -9,8 +9,8 @@ class ListingController extends Controller
 {
     // To get the home page
     public function index(){
-        dd(request('tag'));
-        $listings = Listing::all();
+        //dd(request('tag'));
+        $listings = Listing::latest()->filter(request(['tag']))->get();
         return view('listings.index', [
             'listings' => $listings,
         ]);

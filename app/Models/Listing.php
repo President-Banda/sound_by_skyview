@@ -11,9 +11,9 @@ class Listing extends Model
 
     public function scopeFilter($query, array $filters)
     {
-        return $filters->reduce(function ($query, $filter) {
-            return $query->where($filter['key'], $filter['value']);
-        });
+        if($filters['tag'] ?? false){
+            {{ $query->where('tags','like', '%'.request('tag').'%'); }}
+            }
     }
-    
+
 }
