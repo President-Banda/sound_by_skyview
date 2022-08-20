@@ -10,7 +10,7 @@ class ListingController extends Controller
     // To get the home page
     public function index(){
         //dd(request('tag'));
-        $listings = Listing::latest()->filter(request(['tag']))->get();
+        $listings = Listing::latest()->filter(request(['tag', 'search']))->get();
         return view('listings.index', [
             'listings' => $listings,
         ]);
