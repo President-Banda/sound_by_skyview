@@ -12,6 +12,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="//unpkg.com/alpinejs"></script>
         <script src="https://cdn.tailwindcss.com"></script>
         <script>
             tailwind.config = {
