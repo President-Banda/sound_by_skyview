@@ -31,7 +31,7 @@ class ListingController extends Controller
     }
 
     public function store(Request $request){
-        //dd($request->all());
+        //dd($request->file('logo'));
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'company' => ['required', Rule::unique('listings', 'company')],
@@ -41,6 +41,14 @@ class ListingController extends Controller
             'description' => 'required|max:255',
             'tags' => 'required|max:255',
         ]);
+
+        if($request->hasFile('logo')){
+            $validatedData['logo'] = $request->file('logo')->store('logos', 'public');
+        }
+        //dd($validatedData);
+//        else{
+//            dd('No file');
+//        }
 
         Listing::create($validatedData);
 
