@@ -50,6 +50,12 @@
                 </div>
             </div>
         </x-card>
+
+        <x-card class="mt-4 pt-2 space-x-6">
+            <a href="{{ route('listings.edit', $listing->id) }}">
+                <i class="fa-solid fa-pencil"></i> Edit
+            </a>
+        </x-card>
     </div>
 
     <p>
