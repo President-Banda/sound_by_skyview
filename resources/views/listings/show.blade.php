@@ -55,11 +55,16 @@
             <a href="{{ route('listings.edit', $listing->id) }}">
                 <i class="fa-solid fa-pencil"></i> Edit
             </a>
+
+            <form action="{{ route('listings.delete', $listing->id) }}" method="post" role="form">
+                @csrf
+                @method('delete')
+                <button type="submit" class="bg-laravel text-white m-2 py-2 rounded-xl hover:opacity-80">
+                    <i class="fa-solid fa-trash"></i> Delete
+            </form>
         </x-card>
     </div>
 
-    <p>
-        {{ $listing['description'] }}
-    </p>
 
-</x-app>>
+
+</x-app>

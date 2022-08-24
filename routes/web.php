@@ -28,5 +28,7 @@ Route::get('/listings/{listing}/edit', [ListingController::class,'edit'])->name(
 //Edit form to submit
 Route::put('/listings/{listing}', [ListingController::class,'update'])->name('listings.update');
 
+Route::delete('/listings/{listing}', [ListingController::class,'destroy'])->name('listings.delete');
+
 Route::get('/listing/{listing}', [ListingController::class,'show']);
 

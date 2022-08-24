@@ -86,4 +86,10 @@ class ListingController extends Controller
         $listing->update($validatedData);
         return back()->with('message', 'Listing updated successfully');
     }
+
+    public function destroy(Listing $listing){
+        //dd($listing);
+        $listing->delete();
+        return redirect('/')->with('message', 'Listing deleted successfully');
+    }
 }
