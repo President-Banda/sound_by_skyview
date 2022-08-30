@@ -42,6 +42,13 @@
                     ><i class="fa-solid fa-gear"></i> Manage Listings</a
                     >
                 </li>
+                <li class="">
+                    <form class="form-inline" method="post" action="{{ route('logout') }}" role="form">
+                        <button type="submit">
+                            <i class="fa-solid fa-sign-out-alt"></i> Logout
+                        </button>
+                    </form>
+                </li>
                 @else
                 <li>
                     <a href="{{ route('register') }}" class="hover:text-laravel"
@@ -54,7 +61,7 @@
                         Login</a
                     >
                 </li>
-                    @endauth
+                @endauth
             </ul>
         </nav>
         <main>

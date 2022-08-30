@@ -42,3 +42,6 @@ Route::post('/user', [UserController::class, 'store'])->name('user.store');
 // show login
 Route::get('/login', [UserController::class, 'login'])->name('login');
 
+// Log user out
+Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+
