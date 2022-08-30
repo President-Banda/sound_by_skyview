@@ -7,7 +7,7 @@
             <p class="mb-4">Login to your account</p>
         </header>
 
-        <form action="{{ route('login') }}" method="POST">
+        <form action="{{ route('authenticate') }}" method="POST">
             @csrf
 
             <div class="mb-6">
