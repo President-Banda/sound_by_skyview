@@ -78,6 +78,7 @@ class ListingController extends Controller
         if($request->hasFile('logo')){
             $validatedData['logo'] = $request->file('logo')->store('logos', 'public');
         }
+        $validatedData['user_id'] = auth()->user()->id;
         //dd($validatedData);
 //        else{
 //            dd('No file');
