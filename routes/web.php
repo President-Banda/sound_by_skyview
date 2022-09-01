@@ -34,7 +34,7 @@ Route::delete('/listings/{listing}', [ListingController::class,'destroy'])->name
 Route::get('/listing/{listing}', [ListingController::class,'show']);
 
 //show register create form
-Route::get('/register', [UserController::class, 'create'])->name('register');
+Route::get('/register', [UserController::class, 'create'])->name('register')->middleware('guest');
 
 // Create new user
 Route::post('/user', [UserController::class, 'store'])->name('user.store');
