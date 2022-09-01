@@ -16,15 +16,15 @@
                 <td
                     class="px-4 py-8 border-t border-b border-gray-300 text-lg"
                 >
-                    <a href="show.html">
-                        Laravel Senior Developer
+                    <a href=" ">
+                        {{ $listing->title }}
                     </a>
                 </td>
                 <td
                     class="px-4 py-8 border-t border-b border-gray-300 text-lg"
                 >
                     <a
-                        href="edit.html"
+                        href="{{ route('listings.edit', $listing) }}"
                         class="text-blue-400 px-6 py-2 rounded-xl"
                     ><i
                             class="fa-solid fa-pen-to-square"
@@ -35,13 +35,11 @@
                 <td
                     class="px-4 py-8 border-t border-b border-gray-300 text-lg"
                 >
-                    <form action="">
-                        <button class="text-red-600">
-                            <i
-                                class="fa-solid fa-trash-can"
-                            ></i>
-                            Delete
-                        </button>
+                    <form action="{{ route('listings.delete', $listing->id) }}" method="post" role="form">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="bg-laravel text-white m-2 py-2 rounded-xl hover:opacity-80">
+                            <i class="fa-solid fa-trash"></i> Delete
                     </form>
                 </td>
             </tr>
@@ -54,6 +52,7 @@
                         </p>
                     </td>
                 </tr>
+                @endunless
             </tbody>
         </table>
     </x-card>

@@ -61,6 +61,7 @@
                 @method('delete')
                 <button type="submit" class="bg-laravel text-white m-2 py-2 rounded-xl hover:opacity-80">
                     <i class="fa-solid fa-trash"></i> Delete
+                </button>
             </form>
         </x-card>
     </div>
