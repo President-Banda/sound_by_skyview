@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ListingController::class,'index']);
 
 // show create.blade.php form
-Route::get('/listings/create', [ListingController::class,'create'])->name('listings.create');
+Route::get('/listings/create', [ListingController::class,'create'])->name('listings.create')->middleware('auth');
 
 // store new listingsController
 Route::post('/listings', [ListingController::class,'store'])->name('listings.store');
