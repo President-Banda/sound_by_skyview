@@ -65,6 +65,10 @@ class ListingController extends Controller
 
     //update listing
     public function update(Request $request, Listing $listing){
+        // check if user is the owner of the listing
+        if($listing->user_id !== auth()->user()->id){
+            return redirect('/')->with('error', 'Unauthorized action');
+        }
         $validatedData = $request->validate([
             'title' => 'required|max:255',
             'company' => 'required',
