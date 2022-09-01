@@ -88,6 +88,13 @@ class ListingController extends Controller
         return back()->with('message', 'Listing updated successfully');
     }
 
+    public function manage(){
+        $listings = auth()->user()->listings()->get();
+        return view('listings.manage', [
+            'listings' => $listings,
+        ]);
+    }
+
     public function destroy(Listing $listing){
         //dd($listing);
         $listing->delete();

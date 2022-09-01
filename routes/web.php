@@ -47,3 +47,6 @@ Route::post('/user/authenticate', [UserController::class, 'authenticate'])->name
 // Log user out
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
+// Manage listings
+Route::get('/manage', [ListingController::class, 'manage'])->name('listing.manage')->middleware('auth');
+
